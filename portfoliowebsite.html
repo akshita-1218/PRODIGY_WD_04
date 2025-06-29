@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshita Sharma | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+      transition: background 0.5s, color 0.5s;
+    }
+    .dark-mode {
+      background: #121212;
+      color: #f0f0f0;
+    }
+    header {
+      background: linear-gradient(to right, #8e44ad, #3498db);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #fff;
+    }
+    header h1 { font-size: 38px; margin: 10px 0; }
+    header p { font-size: 18px; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      text-decoration: none;
+      color: #8e44ad;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3498db;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #8e44ad;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill, .project {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+      background: #f0f0f0;
+    }
+
+    .dark-mode .skill, .dark-mode .project {
+      background: #1e1e1e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #8e44ad;
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Dark Mode</button>
+  <header>
+    <img src="https://via.placeholder.com/130" alt="Akshita Sharma">
+    <h1>Akshita Sharma</h1>
+    <p>Web Developer | Front-End Enthusiast | Java & JavaScript Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#web-projects">Web Projects</a>
+    <a href="#java-projects">Java Projects</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width: 700px; margin: auto;">Hello! I'm Akshita, a passionate web developer from Himachal Pradesh. I'm currently pursuing a Bachelor's degree in Computer Science and enjoy building interactive and user-friendly websites. I'm especially interested in front-end development and continuously learning new technologies like JavaScript, HTML, CSS, and frameworks. In my free time, I enjoy playing badminton and listening to music.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="web-projects">
+    <h2>Web Development Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Responsive Landing Page</h3>
+        <p>Modern web landing page using HTML, CSS, and JavaScript for interaction and scroll effects.</p>
+      </div>
+      <div class="project">
+        <h3>Stopwatch Web App</h3>
+        <p>A functional stopwatch application using JavaScript with start, stop, and reset features.</p>
+      </div>
+      <div class="project">
+        <h3>Tic Tac Toe Game</h3>
+        <p>Interactive tic-tac-toe game built with HTML, CSS, and JavaScript for 2-player gameplay.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>Responsive weather app with real-time weather data using the OpenWeatherMap API.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="java-projects">
+    <h2>Java Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Student Grade Tracker</h3>
+        <p>Java-based project to manage student grades and calculate averages and performance.</p>
+      </div>
+      <div class="project">
+        <h3>Stock Trading Platform</h3>
+        <p>Simple terminal-based stock buying/selling platform using Java collections.</p>
+      </div>
+      <div class="project">
+        <h3>AI Chatbot</h3>
+        <p>Rule-based chatbot built in Java for answering FAQs using NLP logic.</p>
+      </div>
+      <div class="project">
+        <h3>Hotel Reservation System</h3>
+        <p>A Java-based booking system to manage rooms, reservations, cancellations, and file storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Akshita Sharma | Let's connect on <a href="#" style="color: #fff; text-decoration: underline;">LinkedIn</a>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
